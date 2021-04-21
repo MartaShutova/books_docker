@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Books list{% endblock %}
+
+{% block body %}
+    <h2>Give your feedback!</h2>
+
+    {% for book in books %}
+        <h4>{{ book }}</h4>
+        <img src="{{ asset(book.url) }}" style="width:200px; " />
+        <p>{{ book.description }}</p>
+        <p>Year - {{ book.year }}</p>
+        <p>Price: {{ book.price }}</p>
+    {% endfor %}
+{% endblock %}

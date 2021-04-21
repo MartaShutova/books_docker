@@ -1,0 +1,10 @@
+App\Entity\Books:
+    book_{1..100}:
+        isbn: <isbn13()>
+        title: <sentence(4)>
+        description: <text()>
+        author: <name()>
+        year: <numberBetween(1800, 2021)>
+        price: <numberBetween(10, 100)>,<numberBetween(00, 99)>$
+        url: https://mk0meaningfullibmht6.kinstacdn.com/wp-content/uploads/2018/07/book-stack.jpg
+        status: <numberBetween(0, 1)>
