@@ -10,7 +10,23 @@ use Symfony\Component\Serializer\Annotation\Groups;
 /**
  * @ORM\Entity(repositoryClass=BooksRepository::class)
  *
- * @ApiResource
+ * @ApiResource(
+ *      collectionOperations = {
+ *          "get"={
+ *              "method"="GET",
+ *              "path"="/album.{_format}",
+ *          },
+ *          "post"={
+ *              "method"="POST",
+ *              "path"="/album.{_format}",
+ *          },
+ *      },
+ *     itemOperations={
+ *          "get"={
+ *              "method"="GET",
+ *              "path"="/album/{id}.{_format}",
+ *          },
+ *     }
  * )
 */
 class Books
